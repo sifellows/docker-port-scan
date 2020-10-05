@@ -8,5 +8,6 @@ RUN apk add --update nginx nmap libxslt bash && \
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY entrypoint.sh /entrypoint.sh
+COPY nmap-bootstrap.xsl /usr/share/nmap/nmap-bootstrap.xsl
 
 ENTRYPOINT ["/bin/bash", "entrypoint.sh"]
