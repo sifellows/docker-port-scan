@@ -4,10 +4,16 @@ Docker image build providing regular port scan reports via a web interface
 
 ## Quickstart
 
+To build Docker image, run:
+
+```bash
+docker build -t port-scan .
+```
+
 To start a port-scan container, simply run:
 
 ```bash
-docker run -d -p 80:80 vektorlab/port-scan <host> <host>
+docker run -d -p 80:80 port-scan <host> <host>
 ```
 
 Providing the hostname(s) or IP(s) of the hosts you'd like to scan. Navigate to http://localhost/ and you'll see a timestamped html report of the initial scan show up upon completion.
